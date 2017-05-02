@@ -46,7 +46,7 @@ namespace AEJConsulting.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "OrderId,Employee_Id,Product_Id,PO_Number,Quantity")] Order order)
+        public ActionResult Create([Bind(Include = "OrderID,Employee_Id,Product_Id,PO_Number,Quantity")] Order order)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace AEJConsulting.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OrderId,Employee_Id,Product_Id,PO_Number,Quantity")] Order order)
+        public ActionResult Edit([Bind(Include = "OrderID,Employee_Id,Product_Id,PO_Number,Quantity")] Order order)
         {
             if (ModelState.IsValid)
             {
