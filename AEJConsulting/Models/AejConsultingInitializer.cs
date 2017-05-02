@@ -22,7 +22,7 @@ namespace AEJConsulting.Models
                 new Employee {First_Name="Jane",Last_Name="Jungle",Email="jjungle@company.com",Phone="(432)210-7320",PTO=18 },
                 new Employee {First_Name="Bill",Last_Name="Overdue",Email="boverdue@company.com",Phone="(921)987-3867",PTO=4 },
                 new Employee {First_Name="Hank",Last_Name="White",Email="hwhite@company.com",Phone="(563)367-9021",PTO=14 },
-                new Employee {First_Name="Harry",Last_Name="Henerson",Email="hhenderson@company.com",Phone="(743)987-5387",PTO=7 },
+                new Employee {First_Name="Harry",Last_Name="Henderson",Email="hhenderson@company.com",Phone="(743)987-5387",PTO=7 },
                 new Employee {First_Name="Bob",Last_Name="Maloogalooga",Email="bmalooga@company.com",Phone="(394)721-6501",PTO=12 },
                 new Employee {First_Name="Kathy",Last_Name="Ackerman",Email="kackerman@company.com",Phone="(472)987-9072",PTO=8 }
             };

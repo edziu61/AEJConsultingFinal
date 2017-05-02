@@ -15,24 +15,26 @@ namespace AEJConsulting.Controllers
         private AejConsultingContext db = new AejConsultingContext();
 
         // GET: Employee
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
-            return View(db.Employee.ToList());
-        }
-
-        // GET: Employee/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
+            ViewBag.LnameSortParam = string.IsNullOrEmpty(sortOrder) ? "lname_desc" : "";
+            ViewBag.FnameSortParam = string.IsNullOrEmpty(sortOrder) ? "fname_asc" : "";
+            var employee = from e in db.Employee
+                           select e;
+            switch (sortOrder)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                case "lname_desc":
+                    employee = employee.OrderByDescending(e => e.Last_Name);
+                    break;
+                case "fname_asc":
+                    employee = employee.OrderBy(e => e.First_Name);
+                    break;
+                default:
+                    employee = employee.OrderBy(e => e.Last_Name);
+                    break;
             }
-            Employee employee = db.Employee.Find(id);
-            if (employee == null)
-            {
-                return HttpNotFound();
-            }
-            return View(employee);
+            //return View(db.Employee.ToList());
+            return View(employee.ToList());
         }
 
         // GET: Employee/Create

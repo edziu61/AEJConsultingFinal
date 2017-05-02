@@ -13,10 +13,12 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.First_Name)
+            @*@Html.DisplayNameFor(model => model.First_Name)*@
+            @Html.ActionLink("First Name", "Index", new { sortOrder = ViewBag.FnameSortParam })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Last_Name)
+            @*@Html.DisplayNameFor(model => model.Last_Name)*@
+            @Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.LnameSortParam })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Email)
